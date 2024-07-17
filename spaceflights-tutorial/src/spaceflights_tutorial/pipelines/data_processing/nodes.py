@@ -28,6 +28,9 @@ def preprocess_companies(companies: pd.DataFrame) -> pd.DataFrame:
     """
     companies["iata_approved"] = _is_true(companies["iata_approved"])
     companies["company_rating"] = _parse_percentage(companies["company_rating"])
+
+    # Add new column
+    companies["test"] = "test"
     return companies
 
 
